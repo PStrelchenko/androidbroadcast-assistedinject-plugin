@@ -1,0 +1,24 @@
+<idea-plugin>
+    <id>org.example.androidbroadcast-plugin</id>
+    <name>AndroidBroadcast</name>
+    <vendor email="p.strelchenko@hh.ru" url="https://hh.ru">HH</vendor>
+
+    <description><![CDATA[
+    Simple code generator for AndroidBroadcast
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.kotlin</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action class="ru.hh.plugins.androidbroadcast.GenerateViewModelFactoryAction"
+                id="ru.hh.plugins.androidbroadcast.GenerateViewModelFactoryAction"
+                text="Generate ViewModel Factory">
+            <add-to-group group-id="KotlinGenerateGroup" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
